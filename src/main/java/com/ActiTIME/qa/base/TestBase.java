@@ -3,10 +3,13 @@ package com.ActiTIME.qa.base;
 import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
 
 public class TestBase {
 	public static WebDriver driver;
@@ -18,7 +21,7 @@ public class TestBase {
 			prop = new Properties();
 
 			FileInputStream ip = new FileInputStream(
-					System.getProperty("user.dir") + "\\src\\main\\java\\com\\ActiTime\\qa\\config\\config.properties");
+					System.getProperty("user.dir") + "\\src\\main\\java\\com\\demo\\qa\\config\\config.properties");
 			prop.load(ip);
 
 		} catch (Exception e) {
@@ -35,7 +38,7 @@ public class TestBase {
 		if (BrowserName.equals("chrome")) {
 
 			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\src\\main\\java\\com\\ActiTIME\\qa\\data\\chromedriver.exe");
+					System.getProperty("user.dir") + "\\src\\main\\java\\com\\demo\\qa\\data\\chromedriver.exe");
 			driver = new ChromeDriver();
 
 		}
@@ -43,7 +46,7 @@ public class TestBase {
 		else {
 
 			System.setProperty("webdriver.gecko.driver",
-					System.getProperty("user.dir") + "\\src\\main\\java\\com\\ActiTIME\\qa\\data\\geckodriver.exe");
+					System.getProperty("user.dir") + "\\src\\main\\java\\com\\demo\\qa\\data\\geckodriver.exe");
 			driver = new FirefoxDriver();
 
 		}

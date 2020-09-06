@@ -1,10 +1,8 @@
 package com.ActiTIME.qa.base;
 
 import java.io.IOException;
-
 import org.testng.ITestContext;
 import org.testng.ITestResult;
-
 import com.relevantcodes.extentreports.ExtentTest;
 
 public class CustomListener extends TestBase {
