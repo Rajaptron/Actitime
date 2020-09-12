@@ -26,7 +26,7 @@ public class SignUpPageTest extends TestBase {
 
 	@Test
 	public static void SignUpFormTest() throws InterruptedException {
-		String Title = sp.SignUpForm("Vineet", "Kumar", "vineet.ece2015@gmail.com", "Test");
+		String Title = sp.SignUpForm("Vineet", "Kumar", "vineet.ece2016@gmail.com", "Test");
 		Assert.assertEquals(Title, "Free Timesheet Online Trial");
 	}
 
