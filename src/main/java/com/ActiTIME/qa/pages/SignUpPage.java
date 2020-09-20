@@ -43,8 +43,10 @@ public class SignUpPage extends TestBase {
 
 	public String SignUpForm(String firstname, String lastname, String email, String companyname)
 			throws InterruptedException {
+		driver.navigate().to("https://www.actitime.com/");
+		Thread.sleep(3000);
 		SignUpButton.click();
-		Thread.sleep(30000);
+		Thread.sleep(3000);
 		String TitleSignUp = driver.getTitle();
 		FirstName.sendKeys(firstname);
 		LastName.sendKeys(lastname);
