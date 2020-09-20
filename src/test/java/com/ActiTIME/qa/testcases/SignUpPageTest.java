@@ -2,6 +2,7 @@ package com.ActiTIME.qa.testcases;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -33,6 +34,11 @@ public class SignUpPageTest extends TestBase {
 	@Test
 	public static void ConfirmMessage() {
 
+	}
+
+	@AfterMethod
+	public static void TearDown() {
+		driver.quit();
 	}
 
 }

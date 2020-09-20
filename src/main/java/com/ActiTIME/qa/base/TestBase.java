@@ -21,7 +21,7 @@ public class TestBase {
 			prop = new Properties();
 
 			FileInputStream ip = new FileInputStream(
-					System.getProperty("user.dir") + "\\src\\main\\java\\com\\demo\\qa\\config\\config.properties");
+					System.getProperty("user.dir") + "\\src\\main\\java\\com\\ActiTIME\\qa\\config\\config.properties");
 			prop.load(ip);
 
 		} catch (Exception e) {
@@ -38,7 +38,7 @@ public class TestBase {
 		if (BrowserName.equals("chrome")) {
 
 			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\src\\main\\java\\com\\demo\\qa\\data\\chromedriver.exe");
+					System.getProperty("user.dir") + "\\src\\main\\java\\com\\ActiTIME\\qa\\data\\chromedriver.exe");
 			driver = new ChromeDriver();
 
 		}
@@ -46,7 +46,7 @@ public class TestBase {
 		else {
 
 			System.setProperty("webdriver.gecko.driver",
-					System.getProperty("user.dir") + "\\src\\main\\java\\com\\demo\\qa\\data\\geckodriver.exe");
+					System.getProperty("user.dir") + "\\src\\main\\java\\com\\ActiTIME\\qa\\data\\geckodriver.exe");
 			driver = new FirefoxDriver();
 
 		}
