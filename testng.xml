@@ -6,7 +6,8 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="com.ActiTIME.qa.pages.testcases.LoginPageTest" />
+			<class name="com.ActiTIME.qa.pages.testcases.SignUpPageTest" />
+	<!--		<class name="com.ActiTIME.qa.pages.testcases.LoginPageTest" /> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -12,4 +12,30 @@ public class LoginPage extends TestBase {
 		super();
 		PageFactory.initElements(driver, this);
 	}
+
+	@FindBy(xpath = "//input[@id='username']")
+	static WebElement UsernameField;
+
+	@FindBy(xpath = "//input[@type='password']")
+	static WebElement PasswordField;
+
+	@FindBy(xpath = "//a[@id='loginButton']")
+	static WebElement LoginButton;
+
+	@FindBy(xpath = "//input[@id='keepLoggedInCheckBox']")
+	static WebElement RememberMeCheckBox;
+
+	@FindBy(xpath = "//span[@class='errormsg']")
+	static WebElement ErrorMessage;
+	
+	@FindBy(xpath = "//a[@id='toPasswordRecoveryPageLink']")
+	static WebElement ForgetPasswordLink;
+	
+	public static void Login(String username, String password) throws InterruptedException {
+		UsernameField.sendKeys(username);
+		PasswordField.sendKeys(password);
+		LoginButton.click();
+		Thread.sleep(3000);
+	}
+
 }
